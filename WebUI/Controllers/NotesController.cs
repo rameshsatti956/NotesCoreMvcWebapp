@@ -13,9 +13,9 @@ namespace WebUI.Controllers
 {
     public class NotesController : Controller
     {
-        private readonly NoteService _service;
+        private readonly INoteService _service;
 
-        public NotesController(NoteService service)
+        public NotesController(INoteService service)
         {
             _service = service;
         }

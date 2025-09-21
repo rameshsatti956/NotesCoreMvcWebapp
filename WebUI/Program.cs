@@ -13,7 +13,7 @@ builder.Services.AddDbContext<NoteDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("NotesDbConnection")));
 
 builder.Services.AddScoped<INoteRepository, NoteRepository>();
-builder.Services.AddScoped<NoteService>();
+builder.Services.AddScoped<INoteService,NoteService>();
 
 
 var app = builder.Build();
